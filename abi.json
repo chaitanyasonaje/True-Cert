@@ -1,0 +1,328 @@
+[
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "instad",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_acr",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_link",
+          "type": "string"
+        },
+        {
+          "internalType": "string[]",
+          "name": "_course",
+          "type": "string[]"
+        }
+      ],
+      "name": "addInstitute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "instad",
+          "type": "address"
+        }
+      ],
+      "name": "viewInstitute",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "acr",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "link",
+              "type": "string"
+            },
+            {
+              "internalType": "string[]",
+              "name": "course",
+              "type": "string[]"
+            },
+            {
+              "internalType": "bool",
+              "name": "del",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct cert.institute",
+          "name": "i",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "instad",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_acr",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_link",
+          "type": "string"
+        },
+        {
+          "internalType": "string[]",
+          "name": "_course",
+          "type": "string[]"
+        }
+      ],
+      "name": "updateInstitute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "instad",
+          "type": "address"
+        }
+      ],
+      "name": "deleteInstitute",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "viewAllInstitutes",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "acr",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "link",
+              "type": "string"
+            },
+            {
+              "internalType": "string[]",
+              "name": "course",
+              "type": "string[]"
+            },
+            {
+              "internalType": "bool",
+              "name": "del",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct cert.institute[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "studad",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "name": "addStudent",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "certad",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "instad",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "studad",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_course",
+          "type": "string"
+        },
+        {
+          "internalType": "int256",
+          "name": "dur",
+          "type": "int256"
+        }
+      ],
+      "name": "issueCertificate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "certad",
+          "type": "address"
+        }
+      ],
+      "name": "revCertificate",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "certad",
+          "type": "address"
+        }
+      ],
+      "name": "viewCertificate",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "stud",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "inst",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "course",
+              "type": "string"
+            },
+            {
+              "internalType": "int256",
+              "name": "duration",
+              "type": "int256"
+            },
+            {
+              "internalType": "bool",
+              "name": "del",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct cert.certificate",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "studad",
+          "type": "address"
+        }
+      ],
+      "name": "viewStudCert",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "stud",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "inst",
+              "type": "address"
+            },
+            {
+              "internalType": "string",
+              "name": "course",
+              "type": "string"
+            },
+            {
+              "internalType": "int256",
+              "name": "duration",
+              "type": "int256"
+            },
+            {
+              "internalType": "bool",
+              "name": "del",
+              "type": "bool"
+            }
+          ],
+          "internalType": "struct cert.certificate[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]
